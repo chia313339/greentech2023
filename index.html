@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2023 綠色科技新創獎勵競賽 | Green Startup Challenge</title>
+  <meta name="description" content="2023 綠色科技新創獎勵競賽 — 知名企業聚首，鎖定綠色科技出招。" />
+  <meta property="og:title" content="2023 綠色科技新創獎勵競賽" />
+  <meta property="og:description" content="知名企業聚首，鎖定綠色科技出招。" />
+  <meta property="og:image" content="img/001.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="img/001.png" />
+  <style>
+    :root {
+      --nav-bg: #01a362;
+      --nav-fg: #ffffff;
+      --nav-h: 56px;
+      --page-max: 1920px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #222;
+      font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei",
+        "Helvetica Neue", Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* ---------- Navigation bar ---------- */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: var(--nav-bg);
+      color: var(--nav-fg);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .navbar__inner {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      min-height: var(--nav-h);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 2px 4px;
+      padding: 6px 10px;
+    }
+
+    .navbar a {
+      display: inline-block;
+      color: var(--nav-fg);
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      white-space: nowrap;
+      transition: background-color 0.15s ease;
+    }
+
+    .navbar a:hover,
+    .navbar a:focus {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    /* ---------- Hero banner (first image, above the nav) ---------- */
+    .hero {
+      display: block;
+      width: 100%;
+      max-width: var(--page-max);
+      height: auto;
+      margin: 0 auto;
+    }
+
+    /* ---------- Page content (stacked images) ---------- */
+    .page {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      font-size: 0; /* remove whitespace gaps between images */
+    }
+
+    .page img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    /* Offset anchor targets so they aren't hidden under the sticky nav */
+    .page img[id] {
+      scroll-margin-top: var(--nav-h);
+    }
+
+    /* ---------- Back-to-top button ---------- */
+    .to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1000;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      border: none;
+      background: var(--nav-bg);
+      color: #fff;
+      font-size: 22px;
+      line-height: 46px;
+      text-align: center;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+    .to-top.show {
+      opacity: 0.9;
+      pointer-events: auto;
+    }
+    .to-top:hover { opacity: 1; }
+
+    @media (max-width: 640px) {
+      .navbar a { font-size: 14px; padding: 6px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- 第一張圖片：Banner（導覽列位於其下方，下滑後固定於頂端） -->
+  <img class="hero" src="img/001.png" alt="2023 綠色科技新創獎勵競賽 主視覺 Banner" fetchpriority="high" />
+
+  <!-- 導覽列 -->
+  <nav class="navbar" aria-label="主選單">
+    <div class="navbar__inner">
+      <a href="#about">關於競賽</a>
+      <a href="#schedule">競賽時程</a>
+      <a href="#companies">企業出題</a>
+      <a href="#apply">報名須知</a>
+      <a href="#rules">競賽辦法</a>
+      <a href="#awards">獎勵與義務</a>
+      <a href="#winners">通過名單</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </nav>
+
+  <!-- 一頁式內容：圖片依序排列 -->
+  <main class="page">
+    <img id="about"     src="img/002.png" alt="關於競賽" loading="lazy" />
+    <img id="schedule"  src="img/003.png" alt="競賽時程" loading="lazy" />
+    <img id="companies" src="img/004.png" alt="企業出題" loading="lazy" />
+    <img id="apply"     src="img/005.png" alt="報名須知" loading="lazy" />
+    <img id="rules"     src="img/006.png" alt="競賽辦法（賽制說明）" loading="lazy" />
+    <img id="awards"    src="img/007.png" alt="獎勵與義務" loading="lazy" />
+    <img               src="img/008.png" alt="獎勵與義務（續）" loading="lazy" />
+    <img id="winners"  src="img/009.png" alt="初賽通過名單" loading="lazy" />
+    <img               src="img/010.png" alt="複賽通過名單" loading="lazy" />
+    <img               src="img/011.png" alt="決賽通過名單" loading="lazy" />
+    <img id="faq"      src="img/012.png" alt="FAQ 常見問題" loading="lazy" />
+    <img               src="img/013.png" alt="主辦與協辦單位" loading="lazy" />
+  </main>
+
+  <button class="to-top" id="toTop" aria-label="回到頂端" title="回到頂端">↑</button>
+
+  <script>
+    (function () {
+      var btn = document.getElementById("toTop");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 600) btn.classList.add("show");
+        else btn.classList.remove("show");
+      }, { passive: true });
+      btn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    })();
+  </script>
+</body>
+</html>

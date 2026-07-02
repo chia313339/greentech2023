@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "dwtlung"
+  },
+  "targets": {
+    "dwtlung": {
+      "hosting": {
+        "greentech2023": [
+          "greentech2023"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Firebase deploy cache
+.firebase/
+
+# Local editor / tooling config
+.claude/

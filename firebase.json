@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "target": "greentech2023",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md",
+      "img/bk/**",
+      "img/[0-9][0-9]-*.png"
+    ]
+  }
+}
