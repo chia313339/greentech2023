@@ -72,6 +72,42 @@
       background: rgba(255, 255, 255, 0.18);
     }
 
+    /* ---------- Dropdown submenu ---------- */
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .nav-submenu {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 180px;
+      background: var(--nav-bg);
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      padding: 4px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.15s ease, visibility 0.15s ease;
+      z-index: 1001;
+    }
+
+    .nav-dropdown:hover .nav-submenu,
+    .nav-dropdown:focus-within .nav-submenu {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .nav-submenu a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: 15px;
+      white-space: normal;
+    }
+
     /* ---------- Hero banner (first image, above the nav) ---------- */
     .hero {
       display: block;
@@ -140,7 +176,13 @@
     <div class="navbar__inner">
       <a href="#about">關於競賽</a>
       <a href="#schedule">競賽時程</a>
-      <a href="#companies">企業出題</a>
+      <span class="nav-dropdown">
+        <a href="#companies">企業出題</a>
+        <span class="nav-submenu">
+          <a href="https://drive.google.com/drive/folders/12c3BcwkQtPmGzzzYSoQeV_LAnbDCE5oP?usp=sharing"
+             target="_blank" rel="noopener noreferrer">完整題目下載</a>
+        </span>
+      </span>
       <a href="#apply">報名須知</a>
       <a href="#rules">競賽辦法</a>
       <a href="#awards">獎勵與義務</a>
